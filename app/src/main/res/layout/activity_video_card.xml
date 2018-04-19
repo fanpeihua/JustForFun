@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".eyepetizer.detail.VideoCardActivity">
+
+    <fanpeihua.justforfun.cutomview.StandardGSYVideoPlayer
+        android:id="@+id/video_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_210_y"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/video_player">
+
+        <ImageView
+            android:id="@+id/iv_cover_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_scroller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="true"
+            android:overScrollMode="never"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/layout_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/detail_bg1"
+                    android:padding="@dimen/dp_16_y">
+
+                    <fanpeihua.justforfun.cutomview.FZTextView
+                        android:id="@+id/tv_title"
+                        style="@style/fz_tv_title"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/dp_16_x"/>
+
+                    <fanpeihua.justforfun.cutomview.FZTextView
+                        android:id="@+id/tv_category"
+                        style="@style/tv_detail"
+                        android:layout_below="@+id/tv_title"
+                        android:layout_marginTop="@dimen/dp_8_y"/>
+
+                    <fanpeihua.justforfun.cutomview.FZTextView
+                        android:id="@+id/tv_description"
+                        style="@style/tv_detail"
+                        android:layout_below="@+id/tv_category"
+                        android:layout_marginTop="@dimen/dp_16_y"
+                        android:gravity="top"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_middle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_description"
+                        android:layout_marginTop="@dimen/dp_8_y">
+
+                        <fanpeihua.justforfun.cutomview.FZTextView
+                            android:id="@+id/tv_like_num"
+                            style="@style/tv_detail"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/ic_action_favorites_without_padding"
+                            android:drawablePadding="@dimen/dp_8_x"
+                            android:gravity="center_vertical"/>
+
+                        <fanpeihua.justforfun.cutomview.FZTextView
+                            android:id="@+id/tv_share_num"
+                            style="@style/tv_detail"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/ic_action_share_without_padding"
+                            android:drawablePadding="@dimen/dp_8_x"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="@dimen/dp_8_y"
+                            android:paddingTop="@dimen/dp_8_y"/>
+
+                        <fanpeihua.justforfun.cutomview.FZTextView
+                            android:id="@+id/tv_reply_num"
+                            style="@style/tv_detail"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/ic_action_reply_without_padding"
+                            android:drawablePadding="@dimen/dp_8_x"
+                            android:gravity="center_vertical"/>
+
+                        <fanpeihua.justforfun.cutomview.FZTextView
+                            android:id="@+id/tv_download_num"
+                            style="@style/tv_detail"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/ic_action_offline_without_padding"
+                            android:drawablePadding="@dimen/dp_8_x"
+                            android:gravity="center_vertical"
+                            android:text="@string/download"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/layout_head"
+                    android:background="@color/detail_bg2">
+
+                    <View
+                        android:id="@+id/view_line_gray"
+                        style="@style/view_line_gray"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_line_gray"
+                        android:padding="@dimen/dp_10_y"/>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_author"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_70_y"
+                        android:layout_below="@+id/rv_tags">
+
+                        <View style="@style/view_line_gray"/>
+
+                        <ImageView
+                            android:id="@+id/iv_author_icon"
+                            android:layout_width="@dimen/dp_42_x"
+                            android:layout_height="@dimen/dp_42_x"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/dp_16_y"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dp_12_x"
+                            android:layout_marginRight="@dimen/dp_12_x"
+                            android:layout_toLeftOf="@+id/btn_focus"
+                            android:layout_toRightOf="@+id/iv_author_icon"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <fanpeihua.justforfun.cutomview.FZTextView
+                                android:id="@+id/tv_author_name"
+                                style="@style/fz_tv_title"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/dp_12_x"/>
+
+                            <fanpeihua.justforfun.cutomview.FZTextView
+                                android:id="@+id/tv_author_description"
+                                style="@style/tv_detail"
+                                android:layout_marginTop="@dimen/dp_5_y"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textSize="@dimen/dp_12_x"/>
+                        </LinearLayout>
+
+                        <View
+                            style="@style/view_line_gray"
+                            android:layout_alignParentBottom="true"/>
+
+                        <Button
+                            android:id="@+id/btn_focus"
+                            style="@style/btn_focus"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_16_y"
+                            android:background="@drawable/focus_btn"
+                            android:text="@string/add_attention"
+                            android:textColor="@android:color/white"/>
+                    </RelativeLayout>
+
+                    <fanpeihua.justforfun.cutomview.FZTextView
+                        android:id="@+id/tv_recommend"
+                        style="@style/fz_tv_title"
+                        android:layout_below="@+id/layout_author"
+                        android:layout_marginTop="@dimen/dp_24_y"
+                        android:paddingLeft="@dimen/dp_16_x"
+                        android:text="@string/recommend"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp_14_x"
+                        app:isBold="false"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_recommend"
+                        android:layout_marginTop="@dimen/dp_8_y"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle"
+    >
+
+    <corners
+        android:bottomLeftRadius="@dimen/dp_2_y"
+        android:bottomRightRadius="@dimen/dp_2_y"
+        android:topLeftRadius="@dimen/dp_2_y"
+        android:topRightRadius="@dimen/dp_2_y"
+        />
+    <stroke
+        android:width="1px"
+        android:color="#ccc"
+        />
+    <solid android:color="#50000000"/>
+    <padding
+        android:bottom="@dimen/dp_4_y"
+        android:left="@dimen/dp_8_y"
+        android:right="@dimen/dp_8_y"
+        android:top="@dimen/dp_4_y"
+        />
+
+</shape>

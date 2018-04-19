@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fanpeihua.justforfun.cutomview.BallPulseView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ball_pulse_view"
+    android:layout_width="@dimen/dp_40_y"
+    android:layout_height="@dimen/dp_40_y"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    >
+
+</fanpeihua.justforfun.cutomview.BallPulseView>

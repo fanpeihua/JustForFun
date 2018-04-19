@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="fanpeihua.justforfun">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".main.MainActivity">
+
+        </activity>
+
+        <activity
+            android:name=".splash.WelcomeActivity"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".one.detail.ReadDetailActivity">
+        </activity>
+        <activity
+            android:name=".eyepetizer.search.SearchActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".eyepetizer.detail.AuthorDetailActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".eyepetizer.detail.CategoriesDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+
+        <activity
+            android:name=".eyepetizer.detail.ShareActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".eyepetizer.detail.TagsDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".eyepetizer.detail.VideoCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".eyepetizer.detail.WebDetailActivity"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+        <activity
+            android:name=".eyepetizer.leftmenu.AllCategoriesActivity"
+            android:screenOrientation="portrait"
+            />
+    </application>
+
+</manifest>

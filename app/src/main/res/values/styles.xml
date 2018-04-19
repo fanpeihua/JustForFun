@@ -1,0 +1,116 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="ToolbarPopupTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="main_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_14_x</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColor">@color/main_text_color</item>
+    </style>
+
+    <style name="main_btn">
+        <item name="android:layout_width">@dimen/dp_48_y</item>
+        <item name="android:layout_height">@dimen/dp_32_y</item>
+        <item name="android:textSize">@dimen/dp_13_x</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/main_btn</item>
+    </style>
+
+    <style name="btn_focus">
+        <item name="android:layout_width">@dimen/dp_44_y</item>
+        <item name="android:layout_height">@dimen/dp_22_y</item>
+        <item name="android:textSize">@dimen/dp_11_x</item>
+        <item name="android:textColor">@color/tv_title</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/focus_black_btn</item>
+    </style>
+
+    <style name="fz_tv_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_22_y</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColor">@color/transparent</item>
+        <!--<item name="com.fanpeihua.justforfun:isBold">true</item>-->
+    </style>
+
+    <style name="tv_detail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_12_x</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColor">@color/line_color</item>
+    </style>
+
+    <style name="main_rb">
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">-16dp</item>
+
+    </style>
+
+    <style name="view_line">
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/line_color</item>
+    </style>
+
+    <style name="view_line_gray">
+        <item name="android:layout_height">0.1px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/gray_line_color</item>
+    </style>
+
+    <style name="tv_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dp_20_x</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textColor">@color/tv_title</item>
+    </style>
+
+    <style name="view_black">
+        <item name="android:layout_height">@dimen/dp_4_y</item>
+        <item name="android:layout_width">@dimen/dp_64_y</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="pop_animation">
+        <item name="android:windowEnterAnimation">@anim/screen_right_in</item>
+        <item name="android:windowExitAnimation">@anim/screen_right_out</item>
+    </style>
+
+    <style name="TextAppearance.ExpandedTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/dp_20_x</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+</resources>

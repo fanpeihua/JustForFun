@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8_y"
+    android:background="@android:color/white"
+    android:foreground="?attr/selectableItemBackground"
+    android:transitionName="shareView"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="3dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_16_x"
+        android:paddingRight="@dimen/dp_16_x"
+        >
+
+        <include
+            android:id="@+id/layout_author"
+            layout="@layout/item_one_top"
+            />
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_200_y"
+            android:layout_below="@+id/layout_author"
+            android:layout_marginTop="@dimen/dp_8_y"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/tv_type"
+            style="@style/main_tv"
+            android:layout_below="@+id/iv_cover"
+            android:layout_marginTop="@dimen/dp_26_y"
+            />
+
+        <include layout="@layout/item_bottom"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

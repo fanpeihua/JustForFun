@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".main.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line2"
+            style="@style/view_line"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48_y"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20_x"
+            android:paddingRight="@dimen/dp_20_x">
+
+            <RadioButton
+                android:id="@+id/rb_one"
+                style="@style/main_rb"
+                android:drawableTop="@drawable/rb_one"/>
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                style="@style/main_rb"
+                android:drawableTop="@drawable/rb_all"/>
+
+            <RadioButton
+                android:id="@+id/rb_me"
+                style="@style/main_rb"
+                android:drawableTop="@drawable/rb_me"/>
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

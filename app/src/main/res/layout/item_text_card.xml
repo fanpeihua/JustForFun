@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <fanpeihua.justforfun.cutomview.FZTextView
+        android:id="@+id/tv_header"
+        style="@style/fz_tv_title"
+        android:layout_marginBottom="@dimen/dp_6_y"
+        android:layout_marginLeft="@dimen/dp_16_x"
+        android:layout_marginTop="@dimen/dp_18_y"
+        android:drawableRight="@mipmap/ic_action_more_arrow_dark"/>
+
+    <fanpeihua.justforfun.cutomview.FZTextView
+        android:id="@+id/tv_footer"
+        style="@style/fz_tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_16_y"
+        android:drawableRight="@mipmap/ic_action_more_arrow_dark"
+        android:textSize="@dimen/dp_12_x"/>
+</RelativeLayout>

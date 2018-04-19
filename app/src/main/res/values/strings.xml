@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">JustForFun</string>
+
+
+    <string name="exit_program_hint">Again according to exit the program</string>
+    <string name="ok">OK</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="today">今天</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="category">- %s -</string>
+    <string name="answerer">%s答</string>
+    <string name="reported">小记</string>
+    <string name="subtitle">一一《%s》</string>
+    <string name="author">作者</string>
+    <string name="attention">关注</string>
+    <string name="add_attention">+关注</string>
+    <string name="recommend">相关推荐</string>
+    <string name="read">阅读</string>
+    <string name="comment_list">评论列表</string>
+    <string name="write_comment">写一个评论...</string>
+    <string name="movie_title">《%s》</string>
+    <string name="question">%s问：</string>
+    <string name="answerer1">%s答：</string>
+    <string name="music_info">· %1$s · %2$s | %3$s</string>
+    <string name="end_hint">最后一页到了！</string>
+    <string name="advertising">广告</string>
+    <string name="hot_sort">热门分类</string>
+    <string name="view_all_categories">查看全部分类</string>
+    <string name="recent_project">近期专题</string>
+    <string name="recent_topic">近期话题</string>
+    <string name="week_ranking">本周排行</string>
+    <string name="hot_comments">热门评论</string>
+    <string name="new_author">新入驻作者</string>
+    <string name="small_description">#%1$s / %2$s</string>
+    <string name="follow_description">%1$s / #%2$s</string>
+    <string name="me">Me</string>
+    <string name="category1">#%s</string>
+    <string name="download">缓存</string>
+    <string name="tags">#%s#</string>
+    <string name="all">全部</string>
+    <string name="top_img_des">top_image</string>
+    <string name="top_iv_des">top_image_iv</string>
+    <string name="comments">评论了:</string>
+    <string name="like_num">赞 %s</string>
+    <string name="create_date_hour">%s小时前</string>
+    <string name="create_date_day">%s天前</string>
+    <string name="create_date_month">%s月前</string>
+    <string name="all_categories">置顶分类排序</string>
+    <string name="select">精选</string>
+    <string name="the_end">-The End-</string>
+    <string name="loading">加载中…</string>
+    <string name="search_hint">帮你找到感兴趣的视频</string>
+    <string name="cancel_c">取消</string>
+    <string name="search_hint2">输入标题或描述中的关键词找到更多的视频</string>
+    <string name="hot_search">- 热门搜索词 -</string>
+    <string name="video_num">视频数</string>
+    <string name="by_like_num">被喜欢数</string>
+    <string name="by_share_num">被分享数</string>
+    <string name="by_focus_num">%s 被关注</string>
+    <string name="komori">%s| 小森 Komori</string>
+    <string name="share">分享</string>
+    <string name="wechat">微信</string>
+    <string name="moment">朋友圈</string>
+    <string name="weibo">微博</string>
+    <string name="qq">QQ</string>
+    <string name="more">更多</string>
+    <string name="share_title">「 %s 」</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
