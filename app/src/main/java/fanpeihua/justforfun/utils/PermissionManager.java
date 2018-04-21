@@ -21,7 +21,6 @@ public class PermissionManager {
                                          String... permissions) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             mListenerMap.put(requestCode, permissionsListener);
-            if (checkEachSelfPermission(context, permissions))
         }
     }
 
