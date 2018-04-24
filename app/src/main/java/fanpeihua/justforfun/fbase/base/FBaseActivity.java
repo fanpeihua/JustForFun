@@ -1,6 +1,9 @@
 package fanpeihua.justforfun.fbase.base;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
@@ -58,7 +61,7 @@ public abstract class FBaseActivity<T extends FBasePresenter, V extends ViewData
             mBinding = DataBindingUtil.setContentView(mContext, layoutID);
         }
         initThemeAttrs();
-        setStatusColor();
+//        setStatusColor();
         mPresenter = getPresenter();
         initValueFromPrePage();
         initEventAndData(savedInstanceState);
@@ -261,8 +264,42 @@ public abstract class FBaseActivity<T extends FBasePresenter, V extends ViewData
         Bundle extBundle = getIntent().getExtras();
         if (extBundle != null) {
             Iterator<String> it = extBundle.keySet().iterator();
+            while (it.hasNext()) {
+                String key = it.next();
+                if (key == null) {
+                    continue;
+                }
+                String value = extBundle.getString(key);
+                valueMap.put(key, value);
+            }
         }
     }
 
 
+    public static void toNextActivity(Context context, Class<? extends Activity> clazz, Activity preActivity) {
+        Intent intent = new Intent(context, clazz);
+        Bundle bundle = new Bundle();
+        Iterator it = paramMap.keySet().iterator();
+        while (it.hasNext()) {
+            Object obj = it.next();
+            if (obj != null) {
+                String key = String.valueOf(obj);
+                String value = paramMap.get(key);
+                bundle.putString(key, value);
+            }
+        }
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtras(bundle);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            context.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(preActivity).toBundle());
+        } else {
+            context.startActivity(intent);
+        }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        ActivityController.finishActivity(this);
+    }
 }

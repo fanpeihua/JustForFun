@@ -31,4 +31,18 @@ public class Config {
         int ITEM_TYPE_ARTICLE = 0;
         int ITEM_TYPE_VIDEOS = 2;
     }
+
+    /**
+     * 主题属性常量保存类
+     */
+    @Retention(RetentionPolicy.SOURCE)
+    public @interface ATTRS {
+        String COLOR_PRIMARY = "COLOR_PRIMARY";
+        String COLOR_PRIMARY_DARK = "COLOR_PRIMARY_DARK";
+        String COLOR_ACCENT = "COLOR_ACCENT";
+        String COLOR_TEXT_LIGHT = "COLOR_TEXT_LIGHT";
+        String COLOR_TEXT_DARK = "COLOR_TEXT_DARK";
+        String COLOR_BG = "COLOR_BG";
+        String COLOR_BG_DARK = "COLOR_BG_DARK";
+    }
 }

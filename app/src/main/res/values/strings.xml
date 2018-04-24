@@ -68,6 +68,8 @@
     <string name="more">更多</string>
     <string name="share_title">「 %s 」</string>
 
+    <string name="example_title">保罗：我想摸到西决的地板</string>
+    <string name="example_date">保罗：我想摸到西决的地板</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
