@@ -16,6 +16,7 @@ public interface JCUserAction {
     int ON_ENTER_TINYSCREEN = 9;
     int ON_QUIT_TINYSCREEN = 10;
 
+
     int ON_TOUCH_SCREEN_SEEK_VOLUME = 11;
     int ON_TOUCH_SCREEN_SEEK_POSITION = 12;
 

@@ -3,9 +3,13 @@ package fanpeihua.justforfun.video;
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.appcompat.BuildConfig;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 
 import java.util.Formatter;
@@ -30,13 +34,24 @@ public class JCUtils {
         }
     }
 
+    /**
+     * This method requires the caller to hold the permission ACCESS_NETWORK_STATE.
+     *
+     * @param context context
+     * @return if wifi is connected,return true
+     */
     public static boolean isWifiConnected(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.getType() == ConnectivityManager.TYPE_WIFI;
     }
 
+    /**
+     * Get activity from context object
+     *
+     * @param context context
+     * @return object of Activity or null if it is not Activity
+     */
     public static Activity scanForActivity(Context context) {
         if (context == null) {
             return null;
@@ -47,17 +62,24 @@ public class JCUtils {
         } else if (context instanceof ContextWrapper) {
             return scanForActivity(((ContextWrapper) context).getBaseContext());
         }
+
         return null;
     }
 
+    /**
+     * Get AppCompatActivity from context
+     *
+     * @param context context
+     * @return AppCompatActivity if it's not null
+     */
     public static AppCompatActivity getAppCompActivity(Context context) {
         if (context == null) {
             return null;
         }
         if (context instanceof AppCompatActivity) {
             return (AppCompatActivity) context;
-        } else if (context instanceof ContextThemeWrapper) {
-            return getAppCompActivity(((ContextThemeWrapper) context).getBaseContext());
+        } else if (context instanceof android.support.v7.view.ContextThemeWrapper) {
+            return getAppCompActivity(((android.support.v7.view.ContextThemeWrapper) context).getBaseContext());
         }
         return null;
     }
@@ -68,8 +90,54 @@ public class JCUtils {
     }
 
     public static void saveProgress(Context context, String url, int progress) {
-        if(!JCVideo)
+        if (!JCVideoPlayer.SAVE_PROGRESS) {
+            return;
+        }
+        SharedPreferences spn = context.getSharedPreferences("JCVD_PROGRESS",
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = spn.edit();
+        editor.putInt(url, progress);
+        editor.apply();
     }
 
+    public static int getSavedProgress(Context context, String url) {
+        if (!JCVideoPlayer.SAVE_PROGRESS) {
+            return 0;
+        }
+        SharedPreferences spn;
+        spn = context.getSharedPreferences("JCVD_PROGRESS",
+                Context.MODE_PRIVATE);
+        return spn.getInt(url, 0);
+    }
+
+    /**
+     * if url == null, clear all progress
+     *
+     * @param context context
+     * @param url     if url!=null clear this url progress
+     */
+    public static void clearSavedProgress(Context context, String url) {
+        if (TextUtils.isEmpty(url)) {
+            SharedPreferences spn = context.getSharedPreferences("JCVD_PROGRESS",
+                    Context.MODE_PRIVATE);
+            spn.edit().clear().apply();
+        } else {
+            SharedPreferences spn = context.getSharedPreferences("JCVD_PROGRESS",
+                    Context.MODE_PRIVATE);
+            spn.edit().putInt(url, 0).apply();
+        }
+    }
+
+    public static void i(String tag, String msg) {
+        if (BuildConfig.DEBUG) {
+            Log.i(tag, msg);
+        }
+    }
+
+    public static void d(String tag, String msg) {
+        if (BuildConfig.DEBUG) {
+            Log.i(tag, msg);
+        }
+    }
 
 }

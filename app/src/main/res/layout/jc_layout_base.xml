@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    >
+
+    <FrameLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40_x"
+        android:layout_alignParentBottom="true"
+        android:background="#99000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_16_x"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            />
+        
+        <SeekBar
+            android:id="@+id/bottom_seek_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:max="100"
+            android:maxHeight="@dimen/dp_4_x"
+            android:minHeight="@dimen/dp_4_x"
+            android:paddingBottom="@dimen/dp_8_x"
+            android:paddingTop="@dimen/dp_8_x"
+            android:progressDrawable="@drawable/jc_bottom_seek_progress"
+            />
+    </LinearLayout>
+</RelativeLayout>

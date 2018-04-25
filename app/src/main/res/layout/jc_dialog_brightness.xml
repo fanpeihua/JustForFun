@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jc_dialog_progress_bg"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_155_x"
+        android:layout_height="@dimen/dp_120_x"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_20_x"
+            android:src="@mipmap/jc_brightness_video"
+            />
+
+        <TextView
+            android:id="@+id/tv_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_12_x"
+            android:gravity="center_horizontal"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/dp_16_y"
+            />
+
+        <ProgressBar
+            android:id="@+id/brightness_progressbar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_3_x"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_20_x"
+            android:layout_marginLeft="@dimen/dp_24_x"
+            android:layout_marginRight="@dimen/dp_24_x"
+            android:layout_marginTop="@dimen/dp_8_x"
+            android:max="100"
+            android:progressDrawable="@drawable/jc_dialog_progress"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
