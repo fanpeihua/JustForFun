@@ -3,6 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
 
     <color name="tv_title">#242424</color>
     <color name="tv_reported">#404040</color>
@@ -21,4 +22,27 @@
     <color name="detail_index_bg3">#75000000</color>
     <color name="author_bg">#09000000</color>
     <color name="white">#fff</color>
+
+
+    <color name="colorPrimaryDay">#C01E2F</color>
+    <color name="colorPrimaryDayDark">#A82828</color>
+    <color name="colorPrimaryDayAccent">#F65663</color>
+    <color name="colorDayTextLight">#B6B6BE</color>
+    <color name="colorDayTextDark">#444242</color>
+    <color name="colorDayBg">#FFFFFF</color>
+    <color name="colorDayBgDark">#ECECEC</color>
+
+    <color name="colorPrimaryNight">#600F17</color>
+    <color name="colorPrimaryNightDark">#600F17</color>
+    <color name="colorPrimaryNightAccent">#C01E2F</color>
+    <color name="colorNightTextLight">#8A8A8A</color>
+    <color name="colorNightTextDark">#545459</color>
+    <color name="colorNightBg">#2C2C2C</color>
+    <color name="colorNightBgDark">#1F1F1F</color>
+
+    <color name="white_light">#dddddd</color>
+    <color name="black_light">#363636</color> <!--黑-->
+
+    <color name="gray">#dcdcdc</color>
+
 </resources>

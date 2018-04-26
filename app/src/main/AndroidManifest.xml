@@ -22,65 +22,51 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".main.MainActivity">
-
         </activity>
-
         <activity
             android:name=".splash.WelcomeActivity"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-
         <activity android:name=".one.detail.ReadDetailActivity">
         </activity>
         <activity
             android:name=".eyepetizer.search.SearchActivity"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".eyepetizer.detail.AuthorDetailActivity"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".eyepetizer.detail.CategoriesDetailActivity"
-            android:screenOrientation="portrait"
-            />
-
-
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".eyepetizer.detail.ShareActivity"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".eyepetizer.detail.TagsDetailActivity"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".eyepetizer.detail.VideoCardActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
-
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".eyepetizer.detail.WebDetailActivity"
-            android:screenOrientation="portrait"
-            >
-
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".eyepetizer.leftmenu.AllCategoriesActivity"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait"/>
+        <activity android:name=".nba.newsdetail.MyWebActivity">
+        </activity>
+        <activity android:name=".base.fbase.base.BaseActivity">
+        </activity>
+        <activity android:name=".nba.newsdetail.NewsDetailActivity">
+        </activity>
     </application>
 
 </manifest>

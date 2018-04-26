@@ -124,4 +124,71 @@
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
+
+
+    <!--白天主题颜色-->
+    <style name="AppDayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDay</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDayDark</item>
+        <item name="colorAccent">@color/colorPrimaryDayAccent</item>
+        <!--<item name="android:background">@color/transparent</item>-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!--<item name="android:windowBackground">@color/transparent</item>-->
+        <item name="colorTextLight">@color/colorDayTextLight</item>
+        <item name="colorTextDark">@color/colorDayTextDark</item>
+        <item name="colorBg">@color/colorDayBg</item>
+        <item name="colorBgDark">@color/colorDayBgDark</item>
+
+        <item name="drawableRefresh">@drawable/ic_svg_refresh_day_bg_24</item>
+        <item name="drawableArrowRight">@drawable/ic_svg_arrow_right_day_bg_dark_24</item>
+    </style>
+
+    <!--夜晚主题颜色-->
+    <style name="AppNightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryNightDark</item>
+        <item name="colorAccent">@color/colorPrimaryNightAccent</item>
+        <!--<item name="android:background">@color/transparent</item>-->
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!--<item name="android:windowBackground">@color/transparent</item>-->
+        <item name="colorTextLight">@color/colorNightTextDark</item>
+        <item name="colorTextDark">@color/colorNightTextLight</item>
+        <item name="colorBg">@color/colorNightBg</item>
+        <item name="colorBgDark">@color/colorNightBgDark</item>
+
+        <item name="drawableRefresh">@drawable/ic_svg_refresh_night_bg_24</item>
+        <item name="drawableArrowRight">@drawable/ic_svg_arrow_right_night_bg_dark_24</item>
+    </style>
+
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="bottomDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/bottomDialogAnim</item>
+    </style>
+
+    <style name="bottomDialogAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottom_dialog_enter
+        </item>
+        <item name="android:windowExitAnimation">@anim/bottom_dialog_exit
+        </item>
+    </style>
+
 </resources>

@@ -11,14 +11,13 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-
+        vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
-        ndk{
-            abiFilters 'armeabi','armeabi-v7a'
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a'
         }
 
     }
-
 
     signingConfigs {
 
@@ -140,6 +139,10 @@ dependencies {
     compile 'co.lujun:androidtagview:1.1.4'
     //RecyclerView封装
     compile "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.32"
+
+    compile 'com.tencent.sonic:sdk:2.0.0'
+
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
 
     implementation files('libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar')
     implementation files('libs/umeng_social_api.jar')

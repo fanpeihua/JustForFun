@@ -2,7 +2,7 @@ package fanpeihua.justforfun.nba.newslist;
 
 import java.util.List;
 
-import fanpeihua.justforfun.fbase.base.IFBaseView;
+import fanpeihua.justforfun.base.fbase.base.IFBaseView;
 import fanpeihua.justforfun.nba.bean.NewsIndex;
 import fanpeihua.justforfun.nba.bean.NewsItem;
 

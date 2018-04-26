@@ -1,4 +1,4 @@
-package fanpeihua.justforfun.fbase.base;
+package fanpeihua.justforfun.base.fbase.base;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 
+import fanpeihua.justforfun.main.MainActivity;
 import fanpeihua.justforfun.utils.PermissionManager;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
@@ -32,14 +33,15 @@ public abstract class FBaseFragment<T extends FBasePresenter, V extends ViewData
     protected V mBinding;
     protected ArrayMap<String, Integer> mThemeColorMap;
     private boolean isFirstInit;
-    protected FBaseActivity mContext;
+//    protected FBaseActivity mContext;
+    protected MainActivity mContext;
 
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         try {
-            mContext = (FBaseActivity) context;
+            mContext = (MainActivity) context;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -47,7 +49,7 @@ public abstract class FBaseFragment<T extends FBasePresenter, V extends ViewData
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         this.savedInstanceState = savedInstanceState;
         if (mBinding == null) {
             mView = inflater.inflate(setFragmentLayoutRes(), null, false);

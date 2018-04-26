@@ -1,4 +1,4 @@
-package fanpeihua.justforfun.fbase.base;
+package fanpeihua.justforfun.base.fbase.base;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
@@ -20,6 +20,8 @@ import android.transition.Fade;
 import android.transition.Transition;
 import android.util.ArrayMap;
 
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
@@ -30,7 +32,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
 public abstract class FBaseActivity<T extends FBasePresenter, V extends ViewDataBinding>
-        extends AppCompatActivity {
+        extends RxAppCompatActivity {
 
     protected Activity mContext;
     protected T mPresenter;
@@ -302,4 +304,16 @@ public abstract class FBaseActivity<T extends FBasePresenter, V extends ViewData
         super.finish();
         ActivityController.finishActivity(this);
     }
+
+    /**
+     * 初始化沉浸式状态栏
+     */
+    protected void setStatusColor() {
+        //获取主题中的颜色
+//        TypedValue typedValue = new TypedValue();
+//        getTheme().resolveAttribute(R.attr.colorPrimary, typedValue, true);
+//        int color = typedValue.data;
+//        StatusBarUtils.setColor(mContext, mThemeColorMap.get(C.ATTRS.COLOR_PRIMARY), 0);
+    }
+
 }

@@ -2,6 +2,7 @@ package fanpeihua.justforfun.base;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -31,6 +32,11 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     public abstract int getLayout();
 
+    static {
+        //设置VectorDrawable兼容支持，否则会闪退
+        AppCompatDelegate
+                .setCompatVectorFromResourcesEnabled(true);
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

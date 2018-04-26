@@ -3,10 +3,9 @@ package fanpeihua.justforfun.application;
 import android.app.Application;
 import android.util.Log;
 
-import com.squareup.leakcanary.LeakCanary;
-import com.squareup.leakcanary.RefWatcher;
 import com.tencent.smtt.sdk.QbSdk;
 
+import fanpeihua.justforfun.base.fbase.utils.useful.SPManager;
 import fanpeihua.justforfun.di.component.AppComponent;
 import fanpeihua.justforfun.di.component.DaggerAppComponent;
 import fanpeihua.justforfun.di.module.AppModule;
@@ -68,6 +67,15 @@ public class MyApplication extends Application {
                     .build();
         }
         return mAppComponent;
+    }
+
+    public static boolean isNightTheme() {
+        String isNight = SPManager.get().getStringValue(Config.SP.THEME, Config.FALSE);
+        if (Config.FALSE.equals(isNight)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
 }

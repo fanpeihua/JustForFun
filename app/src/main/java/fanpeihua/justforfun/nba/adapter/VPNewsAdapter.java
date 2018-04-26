@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import java.util.List;
 
-import fanpeihua.justforfun.fbase.base.BaseFragment;
+import fanpeihua.justforfun.base.fbase.base.BaseFragment;
 
 public class VPNewsAdapter extends FragmentPagerAdapter {
     private FragmentManager mFm;

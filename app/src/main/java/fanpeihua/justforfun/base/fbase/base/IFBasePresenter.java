@@ -1,4 +1,4 @@
-package fanpeihua.justforfun.fbase.base;
+package fanpeihua.justforfun.base.fbase.base;
 
 public interface IFBasePresenter {
     void onDestroy();

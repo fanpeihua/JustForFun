@@ -72,4 +72,21 @@
     <string name="example_date">保罗：我想摸到西决的地板</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="example_title_video">视频-2017总决赛官方十佳球</string>
+    <string name="example_date_detail">2018-04-26 09:40:21</string>
+
+    <!--news-->
+    <string name="news_banner">今日头条</string>
+    <string name="news_news">新闻资讯</string>
+    <string name="news_videos">视频集锦</string>
+    <string name="news_depth">最佳时刻</string>
+    <string name="news_highlight">赛场花絮</string>
+    <string name="news">新闻</string>
+    <string name="save_picture">保存图片</string>
+
+
+    <string name="network_error">网络好像开小差了</string>
+    <string name="reload">重新加载</string>
+
 </resources>
